@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6f0f2;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 300px;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+
+.search-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 60px);
+    background-color: #d1e8e9;
+    padding: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    background-color: #e6f0f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #d9e9eb;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #bcd7d8;
+}
+
+.tab-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.tab-content {
+    flex-grow: 1;
+    background-color: #e0eff1;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Add space between contact rows and make it look more organized */
+table {
+    width: 100%;
+    border-collapse: separate; /* Ensure space between rows */
+    border-spacing: 0 10px; /* Add space between rows */
+}
+
+table td, table th {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+/* Style for contact icon */
+.contact-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Styling for Edit and Delete buttons */
+table button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table button.edit-btn {
+    background-color: #f0ad4e; /* Yellow for Edit */
+}
+
+table button.delete-btn {
+    background-color: #dc3545; /* Red for Delete */
+}
+
+table button:hover {
+    opacity: 0.8;
+}
+
+/* General styling for the form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #0078d4;
+    border-radius: 10px;
+    background-color: #e0f7f9;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group i {
+    font-size: 20px;
+    color: #0078d4;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f0f8fa;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+

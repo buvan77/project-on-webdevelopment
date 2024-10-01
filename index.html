@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts Application</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="logo">
+            <!-- Replace image icon with Font Awesome icon -->
+            <i class="fas fa-address-book logo-icon"></i>
+            <span>CONTACTS</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search contacts...">
+            <button class="search-btn">
+                <!-- Replace image with Font Awesome icon -->
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab(event, 'yourContacts')">
+                <!-- Replace image with Font Awesome icon -->
+                <i class="fas fa-address-book tab-icon"></i>
+                YOUR CONTACTS
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'createContact')">
+                <!-- Replace image with Font Awesome icon -->
+                <i class="fas fa-plus tab-icon"></i>
+                CREATE CONTACT
+            </button>
+        </div>
+
+        <!-- Content for Tabs -->
+        <div id="yourContacts" class="tab-content">
+            <h2>Your Contacts <span id="contactCount">(0)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="contactsList">
+                    <!-- Contact rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="createContact" class="tab-content">
+            <h2>Create New Contact</h2>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="contactName">
+                        <i class="fas fa-user"></i> <!-- Replace image icon with Font Awesome icon -->
+                    </label>
+                    <input type="text" id="contactName" placeholder="Enter the name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactPhone">
+                        <i class="fas fa-phone-alt"></i> <!-- Replace image icon with Font Awesome icon -->
+                    </label>
+                    <input type="text" id="contactPhone" placeholder="Enter the phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">
+                        <i class="fas fa-envelope"></i> <!-- Replace image icon with Font Awesome icon -->
+                    </label>
+                    <input type="email" id="contactEmail" placeholder="Enter the email">
+                </div>
+
+                <button type="submit" onclick="createNewContact()">Create Contact</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
